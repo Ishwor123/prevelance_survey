@@ -50,8 +50,7 @@ public class LoginController {
 		ModelAndView modelAndView = new ModelAndView();
 		User userExists = userService.findUserByEmail(user.getEmail());
 		if (userExists != null) {
-			bindingResult
-					.rejectValue("email", "error.user",
+			bindingResult.rejectValue("email", "error.user",
 							"User with the same email already exists");
 		}
 		if (bindingResult.hasErrors()) {
@@ -65,7 +64,6 @@ public class LoginController {
 		}
 		return modelAndView;
 	}
-
 	@RequestMapping(value="/index", method = RequestMethod.GET)
 	public ModelAndView home(){
 		ModelAndView modelAndView = new ModelAndView();
@@ -86,4 +84,9 @@ public class LoginController {
 	public String indexx(){
 		return "new";
 	}
+	@RequestMapping(value="/datatable",method=RequestMethod.GET)
+	public String getDatatable(){
+		return "datatable";
+	}
+
 }

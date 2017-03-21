@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/header :: head">
+
+</head>
+<body class="hold-transition skin-blue sidebar-mini">
+<div class="wrapper">
+
+    <header class="main-header" th:replace="fragments/header :: topbar">
+
+    </header>
+    <!-- Left side column. contains the logo and sidebar -->
+    <aside class="main-sidebar" th:replace="fragments/header :: leftsidebar">
+
+    </aside>
+    <!-- Content Wrapper. Contains page content -->
+    <div th:replace="fragments/pagecontent::pagecontent"></div>
+    <div th:replace="fragments/footer :: footer"></div>
+</div>
+</body>
+</html>
